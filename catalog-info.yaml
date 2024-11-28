@@ -1,0 +1,21 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: mycollgroup.mycollection1
+  description: Checks all Windows hosts for compliant configuration
+  tags:
+    - ansible
+    - playbook
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: acme-scm/craig-playbook
+  links:
+    - url: https://devspaces.apps.sandbox-m2.ll9k.p1.openshiftapps.com/#https://github.com/acme-scm/craig-playbook
+      title: Open Ansible project in OpenShift Dev Spaces
+      icon: web
+spec:
+  type: playbook-project
+  system: system:default/red-hat-developer-hub
+  lifecycle: production
+  owner: group:default/ansible-admins
